@@ -14,8 +14,8 @@ public class Main {
         Phone iphone = new Phone("Apple", "6s", 4.7);
 
         Human me = new Human();
-        me.firstName = "Kacper";
-        me.lastName = "Warda";
+        me.firstName = "Michal";
+        me.lastName = "F";
         me.pet = dog;
         me.mobile = iphone;
 
@@ -44,6 +44,14 @@ public class Main {
 
         iphone.sell();
         me.pet.sell();
-        me.sell();
+//        me.sell();
+
+        Human wife = new Human();
+        wife.firstName="wife";
+        wife.car=dirtyOne;
+
+        System.out.println(me.firstName +"  " +me.car);
+        System.out.println(wife.firstName+"  " +wife.car);
+
     }
 }

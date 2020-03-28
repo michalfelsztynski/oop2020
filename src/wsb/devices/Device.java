@@ -20,4 +20,12 @@ public abstract class Device implements Soldable {
     public void sell(){
         System.out.println("already sold");
     }
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

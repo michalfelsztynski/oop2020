@@ -13,6 +13,17 @@ public class Car extends Device {
     }
 
     @Override
+    public String toString() {
+        return "Car{" +
+                "yearOfProduction=" + yearOfProduction +
+                ", sizeOfAnEngine=" + sizeOfAnEngine +
+                ", plates='" + plates + '\'' +
+                ", producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
     public void turnOn() {
         System.out.println("car is ready to go");
     }
