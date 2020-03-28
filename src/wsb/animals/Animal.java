@@ -1,8 +1,10 @@
-package wsb;
+package wsb.animals;
+
+import wsb.Edible;
 
 import java.io.File;
 
-public class Animal implements Soldable, Edible {
+public abstract class Animal {
     final String species;
     private Double weight;
     public String name;
@@ -33,7 +35,7 @@ public class Animal implements Soldable, Edible {
     }
 
 
-    void feed() {
+    public void feed() {
         if (weight == 0) {
             System.out.println("too late, " + name + " is dead");
         } else {
@@ -42,7 +44,7 @@ public class Animal implements Soldable, Edible {
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if(weight == 0.0){
             System.out.println("you can't walk the street with dead animal you freak");
         } else if (weight > 3.0) {
@@ -61,14 +63,7 @@ public class Animal implements Soldable, Edible {
         return weight;
     }
 
-
-    @Override
-    public void sell() throws Exception {
-        System.out.println("now gimme the money");
-    }
-
-    @Override
-    public void eat() throws Exception {
-        System.out.println("that was yuammy");
+    protected void setWeight(Double weight) {
+        this.weight = weight;
     }
 }

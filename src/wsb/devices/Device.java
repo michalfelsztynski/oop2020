@@ -1,24 +1,21 @@
 package wsb.devices;
 
-import wsb.Soldable;
 
-public abstract class Device implements Soldable {
+public abstract class Device {
         final public String producer;
         final public String model;
+        final public Double price;
 
-    public Device(String producer, String model) {
+    public Device(String producer, String model, Double price) {
         this.producer = producer;
         this.model = model;
+        this.price = price;
     }
 
    public abstract void turnOn();
 
     public String getModel(){
         return this.model;
-    }
-
-    public void sell(){
-        System.out.println("already sold");
     }
 
     @Override
